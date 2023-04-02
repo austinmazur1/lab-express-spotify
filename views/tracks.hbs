@@ -1,0 +1,19 @@
+<h2>Preview the tracks</h2>
+
+<ul>
+  {{#each tracks}}
+    <li>
+      <h3>{{name}}</h3>
+      {{!-- {{#if images.length}}
+        <img src="{{images.0.url}}" alt="{{name}} image" />
+      {{/if}} --}}
+      <figure>
+
+        <audio controls src="{{preview_url}}">
+
+        </audio>
+      </figure>
+    </li>
+
+  {{/each}}
+</ul>

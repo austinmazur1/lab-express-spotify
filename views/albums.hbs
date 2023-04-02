@@ -1,13 +1,13 @@
-<h2>Artists page</h2>
+<h2>Albums</h2>
 
 <ul>
-  {{#each artists}}
+  {{#each albums}}
     <li>
       <h3>{{name}}</h3>
       {{#if images.length}}
         <img src="{{images.0.url}}" alt="{{name}} image" />
       {{/if}}
-      <a href="/albums/{{id}}">View Albums</a>
+      <a href="/tracks/{{id}}">View Tracks</a>
     </li>
 
   {{/each}}
