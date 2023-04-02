@@ -1,7 +1,12 @@
 <h2>Search for your favorite artist!</h2>
 
-<form method="GET" action="/artist-search">
+
+<div class=" bg-no-repeat bg-cover bg-center bg-fixed bg-[url('https://img.freepik.com/free-photo/back-view-crowd-fans-watching-live-performance-music-concert-night-copy-space_637285-544.jpg?w=1480&t=st=1680459536~exp=1680460136~hmac=ef4187b6edf1d5fe8cb91fd8c759bff7221916edcfd9da3966a185d756a8853d')]">
+<form class="z-10 h-screen flex flex-col items-center justify-center" method="GET" action="/artist-search">
+<div class="bg-slate-400/75 w-1/4 h-40 flex flex-col items-center justify-center space-y-4 rounded-xl">
   <label for="artist"></label>
-  <input type="text" id="artist" name="artist" placeholder="Find artists" />
-  <input type="submit" value="Search for an Artist" />
+  <input class="shadow appearance-none m rounded py-2 px-3 bg-gray-200 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="artist" name="artist" placeholder="Find artists" />
+  <input class="bg-slate-700 hover:bg-slate-800 text-white py-2 px-4 rounded foucus:outline-none focus:shadow-outline" type="submit" value="Search for an Artist" />
+  </div>
 </form>
+</div>
