@@ -1,14 +1,42 @@
-<h2>Albums</h2>
+{{!-- <h2>Albums</h2> --}}
 
-<ul>
-  {{#each albums}}
-    <li>
-      <h3>{{name}}</h3>
-      {{#if images.length}}
-        <img src="{{images.0.url}}" alt="{{name}} image" />
-      {{/if}}
-      <a href="/tracks/{{id}}">View Tracks</a>
-    </li>
 
-  {{/each}}
-</ul>
+  <div class="p-12 grid grid-cols-2 gap-6">
+    {{#each albums}}
+      <div class="relative flex items-center justify-center ">
+
+        {{#if images.length}}
+          <img class="w-auto h-auto rounded p-2 shadow-md"src="{{images.0.url}}" alt="{{name}} image" />
+        {{/if}}
+        <div class="absolute bottom-6 flex flex-col justify-center items-center bg-slate-400 w-2/3 p-4 rounded-xl h-16">
+          <h3 class="text-white text-lg font-bold">{{name}}</h3>
+          <a class="text-white hover:text-blue-700"href="/tracks/{{id}}">View Tracks</a>
+        </div>
+
+      </div>
+    {{/each}}
+  </div>
+
+
+{{!-- 
+<div class="bg-slate-500 justify-center">
+  <div class="p-12 grid grid-cols-3 gap-6">
+    {{#each artists}}
+      <div class="flex items-center justify-items-start bg-slate-200 rounded-xl p-4 shadow-md">
+
+        {{#if images.length}}
+          <img
+            class="w-32 h-32 object-cover rounded-full mr-4"
+            src="{{images.0.url}}"
+            alt="{{name}} image"
+          />
+        {{/if}}
+        <div>
+          <h3 class="text-lg font-bold">{{name}}</h3>
+          <a class="text-slate-500 bg-slate-300 p-1 rounded-lg hover:text-blue-700 hover:bg-slate-100"href="/albums/{{id}}">View Albums</a>
+        </div>
+
+      </div>
+    {{/each}}
+  </div>
+</div> --}}
