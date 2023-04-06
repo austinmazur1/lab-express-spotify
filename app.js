@@ -50,7 +50,7 @@ app.get("/artist-search", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-//Album page
+//Album page //using params here to get the artist id
 app.get("/albums/:artistId", (req, res) => {
   const { artistId } = req.params;
   // console.log("this is the artistID:", artistId);
@@ -75,7 +75,6 @@ app.get("/tracks/:albumId", (req, res) => {
 
   spotifyApi.getAlbumTracks(albumId).then(
     function (data) {
-      // console.log(data.body);
       // console.log("show me preview", data.body);
       const tracks = data.body.items;
       res.render("tracks", { tracks });

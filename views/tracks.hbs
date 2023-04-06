@@ -1,13 +1,37 @@
-<h2>Preview the tracks</h2>
+<div class="bg-slate-500 text-white">
+  <div class="flex justify-around p-12 text-4xl">
+    <h2 class="">Title</h2>
+    <h2 class="">Listen</h2>
+  </div>
 
-<ul>
+  <div class="">
+    {{#each tracks}}
+      <div class="grid grid-cols-2 p-4 justify-items-center border-2 m-2">
+        <div class="content-center p-4 text-lg font-bold">
+          <h3>{{name}}</h3>
+        </div>
+        <div class="self-center">
+          <figure>
+
+            <audio controls src="{{preview_url}}" type="audio/mpeg">
+
+            </audio>
+          </figure>
+        </div>
+      </div>
+
+    {{/each}}
+  </div>
+</div>
+
+{{!-- <ul>
   {{#each tracks}}
     <li>
       <h3>{{name}}</h3>
       {{!-- {{#if images.length}}
         <img src="{{images.0.url}}" alt="{{name}} image" />
       {{/if}} --}}
-      <figure>
+{{!-- <figure>
 
         <audio controls src="{{preview_url}}" type="audio/mpeg">
 
@@ -16,4 +40,4 @@
     </li>
 
   {{/each}}
-</ul>
+</ul> --}}∏
